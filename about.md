@@ -3,27 +3,23 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Hey there! I am Kireeti, a second year undergraduate student majoring in Computer Science and Engineering. I am passionate about Software development and Artificial Intelligence. I have developed an interest in machine learning and since have been self learning and building projects.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I have started this blog as a means for me to share my thoughts and connect with others.
 
-There are currently two themes built on Poole:
+Other than software development my interests also include music, anime and finance.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+## Projects
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+Although most of my projects dont follow open source spirit and are not documented properly, these still work and are a way for me to learn.
 
-## Setup
+* [Open-set Face verification](https://github.com/kir-7/Openset-Face-Verification)
+* [PINNs for Harmonic Oscillator]([http://hyde.getpoole.com](https://github.com/kir-7/HarmonicOscillator))
+* [Image colorization using GANs](https://github.com/kir-7/Image-Colorization)
+* [A* path finding visualizer](https://github.com/kir-7/A_star-pathfinding)
 
-Some fun facts about the setup of this project include:
+### Contact
 
-* Built for [Jekyll](https://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Atom](https://atom.io)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+You can contact me through my twitter https://twitter.com/kireeti___ or email me at pisco.7899@gmail.com
 
 Thanks for reading!
