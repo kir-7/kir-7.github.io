@@ -20,7 +20,7 @@ Although most of my projects dont follow open source spirit and are not document
 
 ### Resume
 
-![Resume](assets\Resume (2).pdf)
+![Resume](kir-7.github.io\assets\Resume (2)_page-0001 (1).jpg)
 
 ### Contact
 
