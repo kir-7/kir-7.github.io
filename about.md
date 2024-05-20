@@ -20,6 +20,6 @@ Although most of my projects dont follow open source spirit and are not document
 
 ### Contact
 
-You can contact me through my twitter https://twitter.com/kireeti___ or email me at pisco.7899@gmail.com
+You can contact me through my [twitter](https://twitter.com/kireeti___) or email me at pisco.7899@gmail.com
 
 Thanks for reading!
