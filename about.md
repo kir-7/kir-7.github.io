@@ -21,7 +21,7 @@ Although most of my projects dont follow open source spirit and are not document
 ### Resume
 
 <img src="{{ "/assets/Resume.jpg" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-
+<a href="{{ "/assets/Resume.jpg" | prepend: site.baseurl | prepend: site.url}}" download="Resume_Kireeti">Download</a>
 ### Contact
 
 You can contact me through my [twitter](https://twitter.com/kireeti___) or email me at pisco.7899@gmail.com
