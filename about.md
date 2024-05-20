@@ -20,7 +20,7 @@ Although most of my projects dont follow open source spirit and are not document
 
 ### Resume
 
-![Resume](kir-7.github.io\assets\Resume (2)_page-0001 (1).jpg)
+<img src="{{ "/assets/Resume.jpg" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
 
 ### Contact
 
