@@ -9,7 +9,7 @@ I have started this blog as a means for me to share my thoughts and connect with
 
 Other than software development my interests also include music, anime and finance.
 
-## Projects
+### Projects
 
 Although most of my projects dont follow open source spirit and are not documented properly, these still work and are a way for me to learn.
 
@@ -17,6 +17,10 @@ Although most of my projects dont follow open source spirit and are not document
 * [PINNs for Harmonic Oscillator](https://github.com/kir-7/HarmonicOscillator)
 * [Image colorization using GANs](https://github.com/kir-7/Image-Colorization)
 * [A* path finding visualizer](https://github.com/kir-7/A_star-pathfinding)
+
+### Resume
+
+<iframe src="assets\Resume (2).pdf" width="100%" height="500px" ></iframe>
 
 ### Contact
 
