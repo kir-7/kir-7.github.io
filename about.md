@@ -20,7 +20,7 @@ Although most of my projects dont follow open source spirit and are not document
 
 ### Resume
 
-<iframe src="assets\Resume (2).pdf" width="100%" height="500px" ></iframe>
+![Resume](assets\Resume (2).pdf)
 
 ### Contact
 
