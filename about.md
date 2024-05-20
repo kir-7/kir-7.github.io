@@ -14,7 +14,7 @@ Other than software development my interests also include music, anime and finan
 Although most of my projects dont follow open source spirit and are not documented properly, these still work and are a way for me to learn.
 
 * [Open-set Face verification](https://github.com/kir-7/Openset-Face-Verification)
-* [PINNs for Harmonic Oscillator]([http://hyde.getpoole.com](https://github.com/kir-7/HarmonicOscillator))
+* [PINNs for Harmonic Oscillator](https://github.com/kir-7/HarmonicOscillator)
 * [Image colorization using GANs](https://github.com/kir-7/Image-Colorization)
 * [A* path finding visualizer](https://github.com/kir-7/A_star-pathfinding)
 
