@@ -1,4 +1,4 @@
-**Molecular Generation using Graph Neural Networks**
+***Molecular Generation using Graph Neural Networks***
 
 **Background**
 
@@ -46,3 +46,18 @@ As I continue to refine the model, there are still several areas I'm exploring:
 4. Exploring techniques for latent space disentanglement to potentially improve the interpretability and controllability of the generated molecules.
 
 This project has not only enhanced my technical skills but also reinforced the importance of perseverance and attention to detail in machine learning research. As I continue to refine this model and explore new applications of graph neural networks, I'm excited to see where this journey will lead next.
+
+**Findings and the Future**
+
+After a few months of trying to create a model for molecule generation I seem to find myself in the same problems:
+
+1. Writing a valid and sound edge loss function is hard, as the number of edges per batch of input is very high (order of 1000) the model seem to always predict either no bond or single bond in the original paper they don't clearly mention how this function is written (may be I am overlooking some important detail) but having the general idea that comapring the output graph to the input graph such that 
+loss = -log(p) is that edge is in input graph and loss = -log(1-p) is that edge is not in input graph but implementing this is a pain as we need to properly check the indexing of nodes and other batching problem that PyG brings. An alternative can be comapring adjecency matrix implemening that is also not simple.
+
+2. May be training this model for a longer time might lead to better results as the method doesn't seem to be completely wrong, but training the model for that long without any assurance is quite hard due to non availability of copute power.
+
+3. Overall there is definately aa better way to implement this than what I have done, but due to non availability of implementaion of paper (I wasn't able to find any) getting hope is difficult and it becomes hard for me to find my mistakes (I don't have anyone to look at my code for criticism).
+ 
+After this I get the feeling that there are better approches which are more sound like autoregressive models and reinforcemnet learning approches, these require some thought but in general these are more hopefull approches.
+
+As for the Future, I am leaving the project for now but nonetheless I still learnt alot from this and in the future I will get back to this and try to get better results.
