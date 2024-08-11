@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-Hey there! I am Kireeti, a second year undergraduate student majoring in Computer Science and Engineering. I am passionate about Software development and Artificial Intelligence. I have developed an interest in machine learning and since have been self learning and building projects.
+Hey there! I am Kireeti, a third year undergraduate student majoring in Computer Science and Engineering. I am passionate about Software development and Artificial Intelligence. I have developed an interest in machine learning and since have been self learning and building projects.
 
 I have started this blog as a means for me to share my thoughts and connect with others.
 
@@ -11,7 +11,7 @@ Other than software development my interests also include music, anime and finan
 
 ### Projects
 
-Although most of my projects dont follow open source spirit and are not documented properly, these still work and are a way for me to learn.
+Most of my projects don't follow open source spirit and are not documented properly.
 
 * [Open-set Face verification](https://github.com/kir-7/Openset-Face-Verification)
 * [PINNs for Harmonic Oscillator](https://github.com/kir-7/HarmonicOscillator)
