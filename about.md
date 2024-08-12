@@ -13,6 +13,7 @@ Other than software development my interests also include music, anime and finan
 
 Most of my projects don't follow open source spirit and are not documented properly.
 
+* [Graph Neural Networks](https://github.com/kir-7/GNNs)
 * [Open-set Face verification](https://github.com/kir-7/Openset-Face-Verification)
 * [PINNs for Harmonic Oscillator](https://github.com/kir-7/HarmonicOscillator)
 * [Image colorization using GANs](https://github.com/kir-7/Image-Colorization)
