@@ -24,9 +24,7 @@ One of the first hurdles I faced was with the edge loss function. Initially, the
 
 The node loss function, on the other hand, showed more promising results early on. After just a couple of epochs, the model went from predicting hundreds of nodes per graph to a much more reasonable number. This quick improvement was encouraging, but it also made me realize the complexity of balancing different components of the loss function.
 
-A particularly vexing issue arose when I noticed that all random inputs to the decoder were producing the same output - specifically, a node count vector of \[10, 7, 0, 1, 0\]. This uniform output, regardless of input, pointed to a fundamental problem in either the model architecture or the training process. After much hair-pulling and debug sessions that stretched into the wee hours of the morning, I finally uncovered the culprit: a simple indexing error in the create_atom_count_vector() function. I was calculating count vectors for all molecules in the batch using only the first molecule's data. It was a facepalm moment that reminded me of the importance of rigorous testing and the sneaky nature of bugs in complex models. This seemingly minor fix had a dramatic impact on the model's behaviour, allowing it to finally produce diverse outputs for different inputs.
-
-Another significant challenge was balancing the various components of the loss function, particularly the Kullback-Leibler (KL) divergence. I noticed that the KL loss kept decreasing, even going below zero at times. While this led to an overall decrease in the total loss, the reconstruction loss (both for edges and nodes) wasn't improving significantly. This imbalance pointed to the need for a more sophisticated approach to handling the KL term.
+A significant challenge was balancing the various components of the loss function, particularly the Kullback-Leibler (KL) divergence. I noticed that the KL loss kept decreasing, even going below zero at times. While this led to an overall decrease in the total loss, the reconstruction loss (both for edges and nodes) wasn't improving significantly. This imbalance pointed to the need for a more sophisticated approach to handling the KL term.
 
 After some research, I implemented KL annealing - a technique where the weight of the KL term is gradually increased during training. This helped stabilise the training process and led to more balanced improvements across all components of the loss.
 
@@ -52,12 +50,8 @@ This project has not only enhanced my technical skills but also reinforced the i
 After a few months of trying to create a model for molecule generation I seem to find myself in the same problems:
 
 1. Writing a valid and sound edge loss function is hard, as the number of edges per batch of input is very high (order of 1000) the model seem to always predict either no bond or single bond in the original paper they don't clearly mention how this function is written (may be I am overlooking some important detail) but having the general idea that comapring the output graph to the input graph such that 
-loss = -log(p) is that edge is in input graph and loss = -log(1-p) is that edge is not in input graph but implementing this is a pain as we need to properly check the indexing of nodes and other batching problem that PyG brings. An alternative can be comapring adjecency matrix implemening that is also not simple.
+loss = -log(p) is that edge is in input graph and loss = -log(1-p) is that edge is not in input graph but implementing this is a pain as we need to properly check the indexing of nodes and other batching problem that PyG brings. An alternative can be comapring adjecency matrix, implemening that is also not simple.
 
 2. May be training this model for a longer time might lead to better results as the method doesn't seem to be completely wrong, but training the model for that long without any assurance is quite hard due to non availability of copute power.
-
-3. Overall there is definately aa better way to implement this than what I have done, but due to non availability of implementaion of paper (I wasn't able to find any) getting hope is difficult and it becomes hard for me to find my mistakes (I don't have anyone to look at my code for criticism).
  
-After this I get the feeling that there are better approches which are more sound like autoregressive models and reinforcemnet learning approches, these require some thought but in general these are more hopefull approches.
-
-As for the Future, I am leaving the project for now but nonetheless I still learnt alot from this and in the future I will get back to this and try to get better results.
+After this I get the feeling that there are better approches which are more sound: autoregressive models and reinforcemnet learning approches, these require some thought but in general appear to be more hopefull.
