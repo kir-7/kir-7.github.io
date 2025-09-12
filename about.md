@@ -21,7 +21,8 @@ Most of my projects don't follow open source spirit and are not documented prope
 
 ### Resume
 
-<img src="{{ "/assets/Resume.jpg" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
+<object data="/assets/resume_ML_website.pdf" type="application/pdf" width="100%"> </object>
+<!-- <img src="{{ "/assets/Resume.jpg" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" /> -->
 <!-- <a href="{{ "/assets/Resume.jpg" | prepend: site.baseurl | prepend: site.url}}" download="Resume_Kireeti">Download</a> -->
 
 ### Contact
