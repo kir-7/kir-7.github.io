@@ -24,7 +24,7 @@ One of the first hurdles I faced was with the edge loss function. Initially, the
 
 The node loss function, on the other hand, showed more promising results early on. After just a couple of epochs, the model went from predicting hundreds of nodes per graph to a much more reasonable number. This quick improvement was encouraging, but it also made me realize the complexity of balancing different components of the loss function.
 
-A significant challenge was balancing the various components of the loss function, particularly the Kullback-Leibler (KL) divergence. I noticed that the KL loss kept decreasing, even going below zero at times. While this led to an overall decrease in the total loss, the reconstruction loss (both for edges and nodes) wasn't improving significantly. This imbalance pointed to the need for a more sophisticated approach to handling the KL term.
+A significant challenge was balancing the various components of the loss function, particularly the Kullback-Leibler (KL) divergence. I noticed that the KL loss kept decreasing. While this led to an overall decrease in the total loss, the reconstruction loss (both for edges and nodes) wasn't improving significantly. This imbalance pointed to the need for a more sophisticated approach to handling the KL term.
 
 After some research, I implemented KL annealing - a technique where the weight of the KL term is gradually increased during training. This helped stabilise the training process and led to more balanced improvements across all components of the loss.
 
@@ -33,8 +33,6 @@ However, I soon realized that the annealing needed to be even more gradual. The 
 The edge prediction task presented its own set of challenges. Due to the nature of molecular graphs, where most potential edges are actually non-bonds, the model tended to be biased towards predicting no bonds. To address this, I implemented class weighting in the cross-entropy loss for edge type prediction, giving more importance to the less frequent bond types.
 
 As I continued to refine the model, I experimented with different architectural choices. For instance, I found that using residual connections (x = x + a, edge_attr = edge_attr + b) seemed to produce better outputs than my initial approach. This highlighted the importance of allowing information to flow more freely through the network, especially in deep graph neural networks.
-
-The journey of implementing this molecular generation model has been a rollercoaster of eureka moments and frustrating roadblocks. Each challenge overcome has deepened my understanding of both the theoretical underpinnings and practical considerations of working with graph neural networks and variational autoencoders.
 
 As I continue to refine the model, there are still several areas I'm exploring:
 
