@@ -21,7 +21,11 @@ Most of my projects don't follow open source spirit and are not documented prope
 
 ### Resume
 
-<object data="/assets/resume_ML_website.pdf" type="application/pdf" width="100%" height='100%'> </object>
+<div style="width: 100%; height: 100vh; min-height: 600px;">
+  <object data="/assets/Resume_latest.pdf" type="application/pdf" width="100%" height="100%" style="display: block;">
+    <p>Your browser doesn't support PDF viewing. <a href="/assets/Resume_latest.pdf">Download the PDF</a> instead.</p>
+  </object>
+</div>
 <!-- <img src="{{ "/assets/Resume.jpg" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" /> -->
 <!-- <a href="{{ "/assets/Resume.jpg" | prepend: site.baseurl | prepend: site.url}}" download="Resume_Kireeti">Download</a> -->
 
