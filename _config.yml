@@ -1,7 +1,7 @@
 # Setup
 title:               Kireeti
 tagline:             ''
-description:         'A site for me to dump my thoughts'
+description:         'Simple personal website'
 url:                 https://kir-7.github.io
 baseurl:             ''
 paginate:            5
