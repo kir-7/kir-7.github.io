@@ -36,19 +36,22 @@ The outline of the approach  is to map the input graph into a latent space using
 
 **The Sparsity Problem and Edge Loss**
 
-A major hurdle in molecular generation is the "Edge Loss" function. In a molecular graph, the number of actual bonds is tiny compared to the number of possible bonds (a fully connected graph). If you train a naive model, it achieves high accuracy simply by predicting "No Bond" for every edge.
-To combat this, one must implement Weighted Cross-Entropy Loss. By assigning a higher penalty to missing a real bond than to predicting a non-existent one, we force the model to learn the structure rather than exploiting the sparsity of the dataset. Additionally, handling the indexing of nodes within the mini-batching schemes of libraries like PyTorch Geometric requires rigorous attention to detail to ensure the adjacency matrix is reconstructed correctly.
+A major challenge in molecular generation is the "Edge Loss" function. In a molecular graph, the number of actual bonds is very less compared to the number of possible bonds (a fully connected graph). If you train a naive model, it achieves high accuracy simply by predicting "No Bond" for every edge.
+
+After testing reading about different approaches, weighted cross-entropy loss seemed appropriate. In this, weights are applied to each class based on the inverse of the frequency of that class in the dataset, so class that appeared less would have high weight, so a lower weight to no bond class and the model is forced to learn the structure of the graph rather than predict "no bond" all the time. Additionally, I would it challenging to handle proper indexing of nodes within the mini-batch for libraries like pytorch geometric, as in PyG, a minibatch is treated as a single graph o disconnected components.
 
 **Balancing the KL Divergence**
-A common failure mode in VAEs is "Posterior Collapse," where the decoder ignores the latent code entirely. This manifests as the KL Divergence term dropping to zero early in training.
-To prevent this, KL Annealing is essential. This involves introducing a weight, for the KL term that starts at 0 and gradually increases to 1 during training. This allows the model to first learn how to reconstruct the molecule (reducing reconstruction loss) before being forced to organize the latent space into a smooth Gaussian distribution.
+During model training, the KL divergence term dropped to low values very early, this made the model unstable and it didn't improve that much afterwards.
+
+To prevent this, I tried KL Annealing. In this a weight is given to the KL term that starts at 0 and gradually increases to 1 during training. This allows the model to first learn how to reconstruct the molecule (reducing reconstruction loss) before being trying to fit the latent space into a gaussian distribution.
 
 **Depth and Residual Connections**
 
-During my experimentation, I observed that deeper GNNs often struggle to propagate gradients effectively. Implementing Residual Connections proved vital. This allows information to flow more freely through the network, resulting in more stable training and better feature extraction.
+During experiments, I observed that deeper GNNs often struggle to propagate gradients effectively. Residual connections were very imporatant to reduce this effect. This allows gradients to flow backwards more efficiently, which stabilizes the training and results in better feature extraction.
 
 **Future Directions in Generative Graphs**
 Implementing a GVAE for molecular generation highlights both the power and the limitations of current methods.
-Adjacency Matrix Complexity: Reconstructing a dense adjacency matrix is computationally expensive, For larger molecules, this becomes a bottleneck.
-Validity Constraints: A probabilistic model might predict a carbon atom with 6 bonds, which is chemically impossible. Pure VAEs struggle to enforce valency rules without complex masking or post-processing.
-Looking forward, the field is moving toward Autoregressive Models (building the graph node-by-node) and Reinforcement Learning approaches. These methods can explicitly enforce chemical validity at each step of the generation process, potentially solving the validity issues inherent in one-shot reconstruction methods.
+* Adjacency Matrix Complexity: Reconstructing a dense adjacency matrix is computationally expensive, For larger molecules, this becomes a problem.
+* Output molecule strucure: The model might predict a carbon atom with 6 bonds, which is not possible. Although the paper suggests a method for this, I didn't implement it.
+
+* Looking forward, the field is moving toward autoregressive models (building the graph node-by-node) and reinforcement learning approaches. These methods can explicitly enforce chemical strcutre at each step of the generation process, potentially solving solving the strcture issues.
