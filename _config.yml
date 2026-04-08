@@ -311,7 +311,7 @@ plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
-  - jekyll-sitemap
+  # - jekyll-sitemap  # remove the sitemap for now
   - jekyll-redirect-from
   - jemoji
 
