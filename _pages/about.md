@@ -7,12 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-
-Hey there! I am Kireeti, a final year undergraduate student majoring in Computer Science and Engineering. I am passionate about Software development and Artificial Intelligence. I have developed an interest in machine learning and since have been self learning and building projects.
+Hey there! I am Kireeti, a recent graduate in Computer Science and Engineering passionate about python, rust and ML. A few years ago, I have developed an interest in machine learning and since have been self learning and building projects.
 
 I have started this blog as a means for me to share my thoughts and connect with others.
 
-Other than software development my interests also include music, anime and finance.
+Other than programming my interests also include manual cars(jdm), music, anime and finance.
 
 ### Projects
 
@@ -21,6 +20,7 @@ My older projects are for structured properly, it will be difficult following th
 <!-- * [Federated Learning](https://github.com/kir-7/federated-learning) -->
 * Federated Learning
 * [Graph Neural Networks](https://github.com/kir-7/GNNs)
+* [ChessAI](https://github.com/kir-7/chessAI)
 * [Open-set Face verification](https://github.com/kir-7/Openset-Face-Verification)
 * [PINNs for Harmonic Oscillator](https://github.com/kir-7/HarmonicOscillator)
 * [Image colorization using GANs](https://github.com/kir-7/Image-Colorization)
