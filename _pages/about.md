@@ -1,43 +1,40 @@
 ---
 permalink: /
-title: "About"
+title: "Kireeti"
 author_profile: true
-redirect_from: 
+classes: wide
+redirect_from:
   - /about/
   - /about.html
 ---
 
-Hey there! I am Kireeti, a recent graduate in Computer Science and Engineering passionate about python, rust and ML. A few years ago, I have developed an interest in machine learning and since have been self learning and building projects.
+I am a recent graduate in Computer Science and Engineering with an interest in Python, Rust, and machine learning. A few years ago, I developed an interest in machine learning, and since then I have been self-learning, building projects, and writing about what I learn. During my undergraduate studies, I worked across different areas of machine learning, primarily on federated learning under the supervision of [Dr. Karthick S](https://www.nitt.edu/home/academics/departments/cse/faculty/skarthick/). I have broad interests across ML, and my current focus is on distillation techniques and federated learning.
 
-I have started this blog as a means for me to share my thoughts and connect with others.
+Beyond ML research, I also enjoy software development work, where I have implemented several systems during my previous internships. I started this blog as a way to share my thoughts and opinions. Outside programming, my interests include manual cars, music, anime, and literature(I am trying to get back into reading more).
 
-Other than programming my interests also include manual cars(jdm), music, anime and finance.
+[Email](mailto:pisco.7899@gmail.com) / [GitHub](https://github.com/kir-7) / [Twitter](https://twitter.com/kireeti___)
 
-### Projects
 
-My older projects are for structured properly, it will be difficult following them.
+## Projects
 
-<!-- * [Federated Learning](https://github.com/kir-7/federated-learning) -->
-* Federated Learning
-* [Graph Neural Networks](https://github.com/kir-7/GNNs)
-* [ChessAI](https://github.com/kir-7/chessAI)
-* [Open-set Face verification](https://github.com/kir-7/Openset-Face-Verification)
-* [PINNs for Harmonic Oscillator](https://github.com/kir-7/HarmonicOscillator)
-* [Image colorization using GANs](https://github.com/kir-7/Image-Colorization)
-* [A* path finding visualizer](https://github.com/kir-7/A_star-pathfinding)
+Some of my older projects are not structured as cleanly as I would like yet, so they may be difficult to follow. I am keeping them here as a map of what I have explored and as placeholders for future writeups.
 
-<!-- ### Resume
+### Federated Learning
 
-<div style="width: 100%; height: 100vh; min-height: 600px;">
-  <object data="/assets/Resume_latest.pdf" type="application/pdf" width="100%" height="100%" style="display: block;">
-    <p>Your browser doesn't support PDF viewing. <a href="/assets/Resume_latest.pdf">Download the PDF</a> instead.</p>
-  </object>
-</div> -->
-<!-- <img src="{{ "/assets/Resume.jpg" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" /> -->
-<!-- <a href="{{ "/assets/Resume.jpg" | prepend: site.baseurl | prepend: site.url}}" download="Resume_Kireeti">Download</a> -->
+FL was the topic of my bachelor's thesis and took up most of the second half of my undergraduate studies. I implemented and compared several FL algorithms, including FedAvg, FedProx, and IFCA, and benchmarked their performance under different data heterogeneity scenarios. I also had the opportunity to work under [Dr. Karthick S](https://www.nitt.edu/home/academics/departments/cse/faculty/skarthick/) on developing a novel FL algorithm, which has been published in the journal Neural Computing and Applications. Refer to this [post](https://kir-7.github.io/About-Federated-Learning/) for an introduction to FL.
 
-### Contact
 
-You can contact me through my [twitter](https://twitter.com/kireeti___) or email me at pisco.7899@gmail.com
+### [RTDETR](https://github.com/kir-7/rtdetr-distillation)
+
+RTDETR is an object detection model that uses components such as a hybrid encoder and AIFI to reduce inference time. This was part of the work I previously did at a company, where RTDETR was used alongside YOLO-seg and other image processing modules for an end-to-end computer vision pipeline. This repository implements the RTDETR model and provides scripts to train and distill it using standard distillation techniques [[1]](https://arxiv.org/abs/1503.02531), [[2]](https://arxiv.org/abs/1412.6550).
+
+### Other Projects
+
+- [ChessAI](https://github.com/kir-7/chessAI)
+- [Graph Neural Networks](https://github.com/kir-7/GNNs)
+- [Open-set Face verification](https://github.com/kir-7/Openset-Face-Verification)
+- [PINNs for Harmonic Oscillator](https://github.com/kir-7/HarmonicOscillator)
+- [Image colorization using GANs](https://github.com/kir-7/Image-Colorization)
+- [A* path finding visualizer](https://github.com/kir-7/A_star-pathfinding)
 
 Thanks for reading!
